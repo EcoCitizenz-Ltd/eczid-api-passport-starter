@@ -1,5 +1,7 @@
 # ECZ-ID API Passport Starter
 
+![ECZ-ID API Passport identity, authority and evidence visual](https://raw.githubusercontent.com/EcoCitizenz-Ltd/.github/main/assets/repository-visuals/eczid-api-passport-starter.jpg)
+
 ## Give APIs an identity and evidence surface that relying systems can re-check.
 
 APIs increasingly act as machine-to-machine trust boundaries.
@@ -81,8 +83,7 @@ Use the ECZ-ID Developer Gateway for current developer resources and product pat
 
 ## Public proof example
 
-**ECZ-ID VERIFIED - ECZ-GB-RBS1NW**
-
+**ECZ-ID public identity evidence - ECZ-GB-RBS1NW**
 [View current public identity and evidence](https://resolver.ecocitizenz.org/passport/ECZ-GB-RBS1NW)
 
 Resolver evidence is information for review. It does not replace the relying party's security, procurement or authorization decision.
