@@ -20,16 +20,14 @@ The **API Passport is a free ECZ-ID child Passport**. Paid ECZ-ID products add o
 
 ## Passport Carry-Card
 
-This repository implements the ECZ-ID **Passport Carry-Card v1.0** reference pattern so an ECZ-ID can travel through repositories, packages, SDKs, services, CI and marketplaces without creating another source of truth.
-
-The Card carries stable pointers such as the ECZ-ID, Passport family and Resolver URL. Current lifecycle state, assurance, evidence and authority must be re-checked through canonical ECZ-ID proof.
+This repository provides a public reference implementation of the ECZ-ID **Passport Carry-Card v1.0** interoperability profile.
 
 Reference files:
 
-- [Carry-Card specification](docs/PASSPORT_CARRY_CARD.md)
+- [Public interoperability guide](docs/PASSPORT_CARRY_CARD.md)
 - [JSON Schema](passport-card.schema.json)
 - [Example Card](.eczid/passport-card.example.json)
-- [Zero-dependency validator](scripts/validate_passport_card.py)
+- [Validator](scripts/validate_passport_card.py)
 
 Validate the example:
 
@@ -37,19 +35,7 @@ Validate the example:
 python scripts/validate_passport_card.py .eczid/passport-card.example.json --allow-example
 ```
 
-The frictionless loop is:
-
-```text
-use free starter
-  -> get free API Passport
-  -> return and configure Carry-Card
-  -> verify through Resolver
-  -> display/share Resolver-linked proof
-  -> next developer or machine encounters ECZ-ID
-  -> next relevant free Passport adoption
-```
-
-No telemetry is required for that adoption loop.
+The Carry-Card carries stable identity pointers. Current proof must be re-checked through the canonical Resolver.
 
 ---
 
@@ -76,7 +62,7 @@ The purpose is not to turn an API description into a security guarantee. It is t
 
 ## Parent and child identity
 
-The Parent identifies the accountable human or organisation context. The API Passport identifies the specific API surface beneath it. A relying party can review both without confusing organisational identity with the machine surface itself.
+The Parent identifies the accountable human or organisation context. The API Passport identifies the specific API surface beneath it.
 
 The ECZ-ID launch model uses seven free child Passport families:
 
@@ -103,13 +89,3 @@ A relying party should be able to:
 [Open the ECZ-ID Resolver](https://resolver.ecocitizenz.org/passport/ECZ-GB-RBS1NW)
 
 Resolver evidence is information for review. It does not replace the relying party's security, procurement or authorization decision.
-
----
-
-## Interoperability
-
-Carry-Card adapters may point from package metadata, OCI/container labels, CI output, marketplace descriptions, websites/services and compatible Agent/MCP manifests.
-
-Adapters should point to the Card or Resolver rather than fork ECZ-ID semantics.
-
-Machine fields such as ECZ-IDs, schema keys, API fields, hashes, signatures, SKUs, ReasonCodes and protocol tokens remain canonical and language-neutral. Human-facing help and documentation can be localized separately.
