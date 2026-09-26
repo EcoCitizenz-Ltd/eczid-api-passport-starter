@@ -1,0 +1,19 @@
+{
+  "schema": "eczid.passport-carry-card",
+  "schema_version": "1.0",
+  "ecz_id": "ECZ-GB-EXAMPLE-API",
+  "passport_family": "api",
+  "resolver_url": "https://resolver.ecocitizenz.org/passport/ECZ-GB-EXAMPLE-API",
+  "parent_ecz_id": "ECZ-GB-RBS1NW",
+  "subject_url": "https://github.com/EcoCitizenz-Ltd/eczid-api-passport-starter",
+  "acquisition_url": "https://trustops.ecocitizenz.com/start?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=carry-card",
+  "source": {
+    "type": "repository",
+    "name": "eczid-api-passport-starter",
+    "url": "https://github.com/EcoCitizenz-Ltd/eczid-api-passport-starter"
+  },
+  "extensions": {
+    "example_fixture": true,
+    "note": "Replace the EXAMPLE ECZ-ID with the issued API Passport before publishing a production card."
+  }
+}
