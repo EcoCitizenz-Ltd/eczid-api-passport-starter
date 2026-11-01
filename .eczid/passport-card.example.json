@@ -1,10 +1,11 @@
 {
   "schema": "eczid.passport-carry-card",
   "schema_version": "1.0",
-  "ecz_id": "ECZ-GB-EXAMPLE-API",
+  "ecz_id": "ECZ-ZZ-EXAMPL::API_PASSPORT-4F9Q2A",
   "passport_family": "api",
-  "resolver_url": "https://resolver.ecocitizenz.org/passport/ECZ-GB-EXAMPLE-API",
-  "parent_ecz_id": "ECZ-GB-RBS1NW",
+  "resolver_url": "https://resolver.ecocitizenz.org/p/ECZ-ZZ-EXAMPL%3A%3AAPI_PASSPORT-4F9Q2A",
+  "machine_proof_url": "https://api.ecocitizenz.com/api/p/ECZ-ZZ-EXAMPL%3A%3AAPI_PASSPORT-4F9Q2A.json",
+  "parent_ecz_id": "ECZ-ZZ-EXAMPL",
   "subject_url": "https://github.com/EcoCitizenz-Ltd/eczid-api-passport-starter",
   "acquisition_url": "https://trustops.ecocitizenz.com/start?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=carry-card",
   "source": {
@@ -14,6 +15,6 @@
   },
   "extensions": {
     "example_fixture": true,
-    "note": "Replace the EXAMPLE ECZ-ID with the issued API Passport before publishing a production card."
+    "note": "Syntactically current but deliberately non-issued fixture. Replace the parent and child identifiers with the legitimately issued API Passport before publishing a production card."
   }
 }
