@@ -6,11 +6,15 @@ on:
       - ".eczid/**"
       - "passport-card.schema.json"
       - "scripts/validate_passport_card.py"
+      - "scripts/test_validate_passport_card.py"
+      - ".github/workflows/passport-card.yml"
   pull_request:
     paths:
       - ".eczid/**"
       - "passport-card.schema.json"
       - "scripts/validate_passport_card.py"
+      - "scripts/test_validate_passport_card.py"
+      - ".github/workflows/passport-card.yml"
 
 permissions:
   contents: read
@@ -23,5 +27,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Parse JSON Schema
+        run: python -m json.tool passport-card.schema.json > /dev/null
       - name: Validate reference Carry-Card
         run: python scripts/validate_passport_card.py .eczid/passport-card.example.json --allow-example
+      - name: Run validator contract regressions
+        run: python -m unittest scripts/test_validate_passport_card.py
