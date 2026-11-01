@@ -14,7 +14,7 @@ The **API Passport is a free ECZ-ID child Passport**. Paid ECZ-ID products add o
 
 [Explore the ECZ-ID Developer Gateway](https://developers.ecocitizenz.com?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=developers)
 
-[View live Resolver proof](https://resolver.ecocitizenz.org/passport/ECZ-GB-RBS1NW)
+[View EcoCitizenz's current public Resolver record](https://resolver.ecocitizenz.org/p/ECZ-GB-RBS1NW)
 
 ---
 
@@ -28,14 +28,50 @@ Reference files:
 - [JSON Schema](passport-card.schema.json)
 - [Example Card](.eczid/passport-card.example.json)
 - [Validator](scripts/validate_passport_card.py)
+- [Validator regression tests](scripts/test_validate_passport_card.py)
 
-Validate the example:
+Validate the checked-in example:
 
 ```bash
 python scripts/validate_passport_card.py .eczid/passport-card.example.json --allow-example
 ```
 
+Run the validator regression suite:
+
+```bash
+python -m unittest scripts/test_validate_passport_card.py
+```
+
+The checked-in example is a **syntactically current but deliberately non-issued fixture**. It is not public proof and is rejected unless `--allow-example` is supplied.
+
 The Carry-Card carries stable identity pointers. Current proof must be re-checked through the canonical Resolver.
+
+---
+
+## Current API Passport identifier
+
+A current child API Passport uses the form:
+
+```text
+{parent_ecz_id}::API_PASSPORT-XXXXXX
+```
+
+Example fixture shape:
+
+```text
+ECZ-ZZ-EXAMPL::API_PASSPORT-4F9Q2A
+```
+
+That fixture is not issued. Do not copy it into production.
+
+Canonical proof routes URL-encode the complete identifier:
+
+```text
+Human:   https://resolver.ecocitizenz.org/p/{URL-encoded ecz_id}
+Machine: https://api.ecocitizenz.com/api/p/{URL-encoded ecz_id}.json
+```
+
+Historical catalogue-era child codes and legacy `/passport/{id}` Resolver paths are not the current Carry-Card contract.
 
 ---
 
@@ -74,6 +110,8 @@ The ECZ-ID launch model uses seven free child Passport families:
 - SDK
 - Service & Workload
 
+Parent strength applies to the accountable organisation. It is not inherited by the child machine Passport.
+
 ---
 
 ## Resolver-first review
@@ -86,6 +124,6 @@ A relying party should be able to:
 4. check freshness and lifecycle state
 5. apply its own local policy
 
-[Open the ECZ-ID Resolver](https://resolver.ecocitizenz.org/passport/ECZ-GB-RBS1NW)
+[Open EcoCitizenz's current Resolver record](https://resolver.ecocitizenz.org/p/ECZ-GB-RBS1NW)
 
-Resolver evidence is information for review. It does not replace the relying party's security, procurement or authorization decision.
+Resolver evidence is information for review. It does not replace the relying party's security, procurement or authorization decision. A missing record is not automatically unsafe or untrusted, and an unreadable Resolver must not be silently treated as absence.
