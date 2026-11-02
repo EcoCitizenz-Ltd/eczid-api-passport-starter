@@ -10,9 +10,9 @@ The **API Passport is a free ECZ-ID child Passport**. Paid ECZ-ID products add o
 
 ### Start free
 
-[Get a free API Passport](https://trustops.ecocitizenz.com/start?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=get-free-passport)
+[Get a free API Passport](https://trustops.ecocitizenz.com/start?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=get-free-passport&ecz_source=github&ecz_surface=eczid-api-passport-starter&intent=free-passport)
 
-[Explore the ECZ-ID Developer Gateway](https://developers.ecocitizenz.com?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=developers)
+[Explore the ECZ-ID Developer Gateway](https://developers.ecocitizenz.com?utm_source=github&utm_medium=repository&utm_campaign=api-passport&utm_content=developers&ecz_source=github&ecz_surface=eczid-api-passport-starter)
 
 [View EcoCitizenz's current public Resolver record](https://resolver.ecocitizenz.org/p/ECZ-GB-RBS1NW)
 
